@@ -10,6 +10,4 @@ defmodule Anthill.Utils do
   def compact(map) when is_map(map) do
     Map.reject(map, fn {_key, value} -> is_nil(value) end)
   end
-
-
 end

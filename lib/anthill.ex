@@ -15,4 +15,4 @@ defmodule Anthill do
   def hello do
     :world
   end
-end 
+end

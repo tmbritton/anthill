@@ -4,5 +4,4 @@ defmodule Anthill.LLM.Fake do
   def send_message(_msg) do
     {:ok, "I am a fake LLM"}
   end
-
 end

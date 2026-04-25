@@ -3,5 +3,5 @@ defmodule Anthill.LLM.Client do
   Behavior for interacting with LLMs.
   """
 
-  @callback send_message(msg :: String.t()) :: {:ok, String.t()} | {:error, term()} 
+  @callback send_message(msg :: String.t()) :: {:ok, String.t()} | {:error, term()}
 end
