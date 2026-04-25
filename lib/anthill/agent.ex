@@ -55,7 +55,7 @@ defmodule Anthill.Agent do
   # Clause 2: LLM has tool calls
   def loading({:llm_response, %{tool_calls: tool_calls = response}}, _from, data) do
     new_data = %{data | history: [response]}
-    #Do tool call
+    # Do tool call
     {:keep_state, :loading, new_data}
   end
 
@@ -85,7 +85,7 @@ defmodule Anthill.Agent do
   def error({:new_message, content}, _from, data) do
     {:keep_state, :error, data, [{:new_message, content}]}
   end
-  
+
   # --- State: Outputting ---
   # Output entry point
   def outputting(:start_output, _from, data) do
@@ -150,5 +150,4 @@ defmodule Anthill.Agent do
   defp handle_retries(data) do
     {:next_state, :outputting, data, [:start_output]}
   end
-
 end
