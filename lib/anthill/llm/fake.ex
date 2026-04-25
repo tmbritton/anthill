@@ -1,7 +1,7 @@
 defmodule Anthill.LLM.Fake do
   @behaviour Anthill.LLM.Client
 
-  def send_message(msg) do
+  def send_message(_msg) do
     {:ok, "I am a fake LLM"}
   end
 
